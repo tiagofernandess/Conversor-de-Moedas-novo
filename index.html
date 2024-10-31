@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Conversor de Moedas</h1>
+    </header>
+    <main>
+        <div class="container">
+
+            <div class="container-entries">
+                <div>
+                    <p>Converter de</p>
+                    <select class="select-from" name="" id="">
+                        <option value="real">R$ Real brasileiro</option>
+                        <option value="dolar">$ Dólar</option>
+                        <option value="euro">€ Euro</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Converter para</p>
+                    <select class="select-price" name="" id="">
+                        <option value="dolar">$ Dólar</option>
+                        <option value="euro">€ Euro</option>
+                        <option value="real">R$ Real brasileiro</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Valor</p>
+                    <input class="value-input" type="number" placeholder="0,00">
+                </div>
+
+                <div>
+                    <button class="button">Converter</button>
+                </div>
+
+            </div>
+
+            <div class="container-result">
+                <div class="item-result">
+
+                    <div class="text">
+                        <img class="currency-image-from" src="real.png" alt="">
+                        <p class="currency-name-from">Real</p>
+                        <h4 class="value-in-real">R$ 0,00</h4>
+                    </div>
+                </div>
+
+
+                <div class="item-result">
+                    <div class="text">
+                        <img class="currencyImage" src="dolar.png" alt="">
+
+                        <p class="currency-name">Dólar</p>
+                        <h4 class="value-convert">$ 0,00</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="scripts.js"></script>
+
+</html>
