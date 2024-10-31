@@ -7,10 +7,6 @@
     font-family: "Roboto", serif;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-}
 
 h1 {
     font-size: 23px;
@@ -21,7 +17,7 @@ h1 {
 }
 
 .container {
-    width: 100%;
+    width: 100vw;
     max-width: 600px;
     display: flex;
     align-items: center;
