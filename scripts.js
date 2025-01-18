@@ -1,17 +1,36 @@
 const convertButton = document.querySelector(".button")
 const selectCurrency = document.querySelector(".select-price")
 const selectFrom = document.querySelector(".select-from")
+const dolarApi = document.querySelector("#dolar-api")
+const euroApi = document.querySelector("#euro-api")
 
-function convertCurrency() {
+
+async function convertCurrency() {
     const inputValue = document.querySelector(".value-input").value
     const realValue = document.querySelector(".value-in-real")
     const convertValue = document.querySelector(".value-convert")
     const selectCurrency = document.querySelector(".select-price")
 
-    const dolarToday = 5.76
-    const euroToday = 6.26
-    const euroFromdolar = 0.92
-    const dolarFromEuro = 1.09
+    const data = await fetch("http://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+
+    const dolarToday = data.USDBRL.high
+    const euroToday = data.EURBRL.high
+    const euroFromdolar = euroToday / dolarToday
+    const dolarFromEuro = dolarToday / euroToday
+
+    dolarApi.innerHTML = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        minimumFractionDigits: 3,
+        maximumFractionDigits: 3
+      }).format(dolarToday);
+
+    euroApi.innerHTML = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        minimumFractionDigits: 3,
+        maximumFractionDigits: 3
+      }).format(euroToday);
 
 
     //Inicio conversão de REAL para Outras Moedas

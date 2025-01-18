@@ -16,7 +16,9 @@ h1 {
     font-weight: 500;
 }
 
-.container {
+
+
+.container, .container-price {
     width: 100vw;
     max-width: 600px;
     display: flex;
@@ -32,6 +34,16 @@ h1 {
     box-shadow: #071d416c 0px 2px 8px 0px
 }
 
+.container-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    margin-top: 30px;
+}
+
+.container-price h4 {
+    margin-bottom: 10px;
+}
 .container-entries div,
 .container-result {
     display: flex;
